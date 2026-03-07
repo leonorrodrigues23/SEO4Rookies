@@ -3,7 +3,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAuthorByCategory } from '../../authors';
 const author = getAuthorByCategory('Technical SEO', 'Core Web Vitals: What They Are and How to Improve Them', ['seo', 'technical']);
 ---
-<BlogLayout title="Core Web Vitals: What They Are and How to Improve Them" description="Understand Google's Core Web Vitals metrics and learn practical techniques to improve your page experience scores." publishDate="Jan 12, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="9 min read" category="Technical SEO">
+<BlogLayout title="Core Web Vitals: What They Are and How to Improve Them" description="Understand Google's Core Web Vitals metrics and learn practical techniques to improve your page experience scores." publishDate="Jan 12, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="9 min read" category="Technical SEO" featuredImage="/images/blog/core-web-vitals.jpg">
   <h2>What Are Core Web Vitals?</h2>
   <p>Core Web Vitals (CWV) are a set of metrics Google uses to measure user experience on the web. They focus on loading performance, interactivity, and visual stability. Since 2021, Core Web Vitals have been a ranking factor in Google Search, so improving them can help your SEO and user satisfaction.</p>
   <p>The three Core Web Vitals are <strong>LCP</strong> (Largest Contentful Paint), <strong>INP</strong> (Interaction to Next Paint), and <strong>CLS</strong> (Cumulative Layout Shift). Each has a "good," "needs improvement," and "poor" threshold.</p>

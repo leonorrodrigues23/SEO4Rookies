@@ -3,7 +3,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAuthorByCategory } from '../../authors';
 const author = getAuthorByCategory('Content Strategy', 'Content Strategy for SEO: How to Plan Content That Ranks', ['seo', 'content']);
 ---
-<BlogLayout title="Content Strategy for SEO: How to Plan Content That Ranks" description="Build a data-driven content strategy with content pillars, topic clusters, search intent mapping, and content gap analysis to grow organic traffic." publishDate="Jan 25, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="11 min read" category="Content Strategy">
+<BlogLayout title="Content Strategy for SEO: How to Plan Content That Ranks" description="Build a data-driven content strategy with content pillars, topic clusters, search intent mapping, and content gap analysis to grow organic traffic." publishDate="Jan 25, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="11 min read" category="Content Strategy" featuredImage="/images/blog/content-strategy.jpg">
   <h2>Content Pillars and Topic Clusters</h2>
   <p>A content pillar is a comprehensive, in-depth piece of content that covers a broad topic. Topic clusters are groups of related articles that link back to the pillar and to each other. This structure helps search engines understand your site's expertise and improves internal linking.</p>
   <p>For example, if your pillar is <em>"Complete Guide to Email Marketing"</em>, your clusters might include <em>"Email Subject Line Best Practices"</em>, <em>"How to Build an Email List"</em>, and <em>"Email Automation Tools"</em>. Each cluster page links to the pillar, and the pillar links to each cluster.</p>

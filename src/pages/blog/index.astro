@@ -9,7 +9,8 @@ const blogPosts = [
     slug: "keyword-research-beginners-guide",
     category: "Keyword Research",
     readingTime: "10 min read",
-    date: "Feb 28, 2026"
+    date: "Feb 28, 2026",
+    image: "/images/blog/keyword-research.jpg"
   },
   {
     title: "On-Page SEO Checklist: 15 Essentials for Every Page",
@@ -17,7 +18,8 @@ const blogPosts = [
     slug: "on-page-seo-checklist",
     category: "On-Page SEO",
     readingTime: "8 min read",
-    date: "Feb 20, 2026"
+    date: "Feb 20, 2026",
+    image: "/images/blog/on-page-seo.jpg"
   },
   {
     title: "How to Build Backlinks in 2026: Proven Strategies",
@@ -25,7 +27,8 @@ const blogPosts = [
     slug: "how-to-build-backlinks",
     category: "Link Building",
     readingTime: "12 min read",
-    date: "Feb 15, 2026"
+    date: "Feb 15, 2026",
+    image: "/images/blog/backlinks.jpg"
   },
   {
     title: "Technical SEO Audit: Complete Guide for Non-Developers",
@@ -33,7 +36,8 @@ const blogPosts = [
     slug: "technical-seo-audit-guide",
     category: "Technical SEO",
     readingTime: "11 min read",
-    date: "Feb 10, 2026"
+    date: "Feb 10, 2026",
+    image: "/images/blog/technical-seo.jpg"
   },
   {
     title: "Google Search Console: The Free SEO Tool You're Not Using Enough",
@@ -41,7 +45,8 @@ const blogPosts = [
     slug: "google-search-console-guide",
     category: "SEO Tools",
     readingTime: "9 min read",
-    date: "Feb 5, 2026"
+    date: "Feb 5, 2026",
+    image: "/images/blog/search-console.jpg"
   },
   {
     title: "Local SEO: How to Rank in Google Maps and Local Search",
@@ -49,7 +54,8 @@ const blogPosts = [
     slug: "local-seo-guide",
     category: "Local SEO",
     readingTime: "10 min read",
-    date: "Jan 30, 2026"
+    date: "Jan 30, 2026",
+    image: "/images/blog/local-seo.jpg"
   },
   {
     title: "Content Strategy for SEO: How to Plan Content That Ranks",
@@ -57,7 +63,8 @@ const blogPosts = [
     slug: "content-strategy-for-seo",
     category: "Content Strategy",
     readingTime: "11 min read",
-    date: "Jan 25, 2026"
+    date: "Jan 25, 2026",
+    image: "/images/blog/content-strategy.jpg"
   },
   {
     title: "SEO vs PPC: Which Is Better for Your Business?",
@@ -65,7 +72,8 @@ const blogPosts = [
     slug: "seo-vs-ppc",
     category: "Digital Marketing",
     readingTime: "8 min read",
-    date: "Jan 18, 2026"
+    date: "Jan 18, 2026",
+    image: "/images/blog/seo-vs-ppc.jpg"
   },
   {
     title: "Core Web Vitals: What They Are and How to Improve Them",
@@ -73,7 +81,8 @@ const blogPosts = [
     slug: "core-web-vitals-guide",
     category: "Technical SEO",
     readingTime: "9 min read",
-    date: "Jan 12, 2026"
+    date: "Jan 12, 2026",
+    image: "/images/blog/core-web-vitals.jpg"
   },
   {
     title: "Common SEO Mistakes That Kill Your Rankings",
@@ -81,7 +90,8 @@ const blogPosts = [
     slug: "common-seo-mistakes",
     category: "SEO Strategy",
     readingTime: "7 min read",
-    date: "Jan 5, 2026"
+    date: "Jan 5, 2026",
+    image: "/images/blog/seo-mistakes.jpg"
   }
 ];
 ---
@@ -99,15 +109,20 @@ const blogPosts = [
       <div class="posts-grid">
         {blogPosts.map((post) => (
           <a href={`/blog/${post.slug}`} class="post-card">
-            <div class="post-meta">
-              <span class="post-category">{post.category}</span>
-              <span class="post-reading">{post.readingTime}</span>
+            <div class="post-image">
+              <img src={post.image} alt={post.title} loading="lazy" />
             </div>
-            <h2 class="post-title">{post.title}</h2>
-            <p class="post-excerpt">{post.description}</p>
-            <div class="post-footer">
-              <span class="post-date">{post.date}</span>
-              <span class="read-more">Read more &rarr;</span>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">{post.category}</span>
+                <span class="post-reading">{post.readingTime}</span>
+              </div>
+              <h2 class="post-title">{post.title}</h2>
+              <p class="post-excerpt">{post.description}</p>
+              <div class="post-footer">
+                <span class="post-date">{post.date}</span>
+                <span class="read-more">Read more &rarr;</span>
+              </div>
             </div>
           </a>
         ))}
@@ -123,21 +138,27 @@ const blogPosts = [
   .hero-subtitle { font-family: 'Poppins', sans-serif; font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); }
   .blog-listing { padding: 4rem 0; background: #F9FAFB; }
   .listing-container { max-width: 56rem; margin: 0 auto; padding: 0 2rem; }
-  .posts-grid { display: flex; flex-direction: column; gap: 1.5rem; }
-  .post-card { display: block; background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 2rem; text-decoration: none; transition: all 0.2s ease; }
-  .post-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-color: #3B82F6; }
+  .posts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+  .post-card { display: flex; flex-direction: column; background: white; border: 1px solid #E5E7EB; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; overflow: hidden; }
+  .post-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); border-color: #3B82F6; }
+  .post-image { width: 100%; height: 200px; overflow: hidden; }
+  .post-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+  .post-card:hover .post-image img { transform: scale(1.05); }
+  .post-content { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
   .post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
   .post-category { background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
   .post-reading { font-size: 0.8125rem; color: #68727C; }
-  .post-title { font-family: 'Sora', sans-serif; font-size: 1.375rem; font-weight: 700; color: #162433; margin-bottom: 0.5rem; line-height: 1.3; }
-  .post-excerpt { font-size: 0.9375rem; color: #4B5563; line-height: 1.6; margin-bottom: 1rem; }
-  .post-footer { display: flex; justify-content: space-between; align-items: center; }
+  .post-title { font-family: 'Sora', sans-serif; font-size: 1.2rem; font-weight: 700; color: #162433; margin-bottom: 0.5rem; line-height: 1.3; }
+  .post-excerpt { font-size: 0.9rem; color: #4B5563; line-height: 1.6; margin-bottom: 1rem; flex: 1; }
+  .post-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
   .post-date { font-size: 0.8125rem; color: #9CA3AF; }
   .read-more { font-size: 0.875rem; font-weight: 600; color: #1a365d; }
   @media (max-width: 768px) {
     .hero-container h1 { font-size: 2rem; }
     .hero-subtitle { font-size: 1.125rem; }
     .blog-listing { padding: 2.5rem 0; }
-    .post-card { padding: 1.5rem; }
+    .posts-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .post-image { height: 180px; }
+    .post-content { padding: 1.25rem; }
   }
 </style>

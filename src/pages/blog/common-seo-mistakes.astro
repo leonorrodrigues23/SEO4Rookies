@@ -3,7 +3,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAuthorByCategory } from '../../authors';
 const author = getAuthorByCategory('SEO Strategy', 'Common SEO Mistakes That Kill Your Rankings', ['seo', 'mistakes']);
 ---
-<BlogLayout title="Common SEO Mistakes That Kill Your Rankings" description="Avoid these 10 common SEO mistakes that can tank your organic traffic and rankings overnight." publishDate="Jan 5, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="7 min read" category="SEO Strategy">
+<BlogLayout title="Common SEO Mistakes That Kill Your Rankings" description="Avoid these 10 common SEO mistakes that can tank your organic traffic and rankings overnight." publishDate="Jan 5, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="7 min read" category="SEO Strategy" featuredImage="/images/blog/seo-mistakes.jpg">
   <h2>Keyword Stuffing</h2>
   <p>Keyword stuffing is the practice of cramming target keywords into your content unnaturally to manipulate rankings. Google's algorithms have long penalized this. Stuffing makes content hard to read and signals low quality.</p>
   <ul>

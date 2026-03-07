@@ -3,7 +3,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAuthorByCategory } from '../../authors';
 const author = getAuthorByCategory('SEO Tools', 'Google Search Console', ['seo', 'tools']);
 ---
-<BlogLayout title="Google Search Console: The Free SEO Tool You're Not Using Enough" description="Unlock the full power of Google Search Console with advanced tips most SEOs overlook." publishDate="Feb 5, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="9 min read" category="SEO Tools">
+<BlogLayout title="Google Search Console: The Free SEO Tool You're Not Using Enough" description="Unlock the full power of Google Search Console with advanced tips most SEOs overlook." publishDate="Feb 5, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="9 min read" category="SEO Tools" featuredImage="/images/blog/search-console.jpg">
   <h2>Setting Up Google Search Console</h2>
   <p>Google Search Console (GSC) is a free tool that shows how Google sees your site. To get started, go to search.google.com/search-console and sign in with your Google account. Add your property by entering your website URL. You'll need to verify ownership before you can access data. Choose a verification method—HTML file upload, HTML meta tag, Google Analytics, Google Tag Manager, or DNS record. For most sites, the HTML meta tag or DNS method works well. Once verified, data will start flowing within a few days.</p>
 

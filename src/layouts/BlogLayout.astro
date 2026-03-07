@@ -13,17 +13,19 @@ interface Props {
   authorImage: string;
   readingTime: string;
   category?: string;
+  featuredImage?: string;
 }
 
-const { 
-  title, 
-  description, 
+const {
+  title,
+  description,
   publishDate,
   author,
   authorTitle,
   authorImage,
   readingTime,
-  category = "SEO"
+  category = "SEO",
+  featuredImage
 } = Astro.props;
 
 const pageTitle = `${title} | ${SITE_BRAND} Blog`;
@@ -59,6 +61,14 @@ const pageTitle = `${title} | ${SITE_BRAND} Blog`;
           </div>
         </div>
       </section>
+
+      {featuredImage && (
+        <div class="featured-image-wrapper">
+          <div class="featured-image-container">
+            <img src={featuredImage} alt={title} class="featured-image" />
+          </div>
+        </div>
+      )}
 
       <article class="blog-content">
         <div class="blog-container">
@@ -100,6 +110,10 @@ const pageTitle = `${title} | ${SITE_BRAND} Blog`;
   .author-title { font-size: 0.8125rem; color: #68727C; }
   .author-date { text-align: right; font-size: 0.8125rem; color: #68727C; }
   .author-date strong { display: block; color: #162433; }
+
+  .featured-image-wrapper { background: white; padding: 2rem 0 0; }
+  .featured-image-container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+  .featured-image { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 12px; display: block; }
 
   .blog-content { background: white; padding: 3rem 0; }
   .blog-container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }

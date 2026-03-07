@@ -3,7 +3,7 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAuthorByCategory } from '../../authors';
 const author = getAuthorByCategory('Digital Marketing', 'SEO vs PPC: Which Is Better for Your Business?', ['seo', 'ppc']);
 ---
-<BlogLayout title="SEO vs PPC: Which Is Better for Your Business?" description="An honest comparison of organic SEO and paid search advertising to help you decide where to invest your marketing budget." publishDate="Jan 18, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="8 min read" category="Digital Marketing">
+<BlogLayout title="SEO vs PPC: Which Is Better for Your Business?" description="An honest comparison of organic SEO and paid search advertising to help you decide where to invest your marketing budget." publishDate="Jan 18, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="8 min read" category="Digital Marketing" featuredImage="/images/blog/seo-vs-ppc.jpg">
   <h2>What Is SEO?</h2>
   <p>SEO (Search Engine Optimization) is the practice of improving your website and content so that search engines rank you higher in organic (unpaid) search results. SEO includes technical optimization, on-page content, backlinks, and user experience. The goal is to earn visibility over time without paying per click.</p>
   <p>SEO is a long-term investment. Results typically take three to six months or more, but once you rank, you can maintain traffic without ongoing ad spend.</p>
