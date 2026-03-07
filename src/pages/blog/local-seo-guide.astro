@@ -1,0 +1,68 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('Local SEO', 'Local SEO: How to Rank in Google Maps and Local Search', ['seo', 'local']);
+---
+<BlogLayout title="Local SEO: How to Rank in Google Maps and Local Search" description="Everything you need to know about local SEO, Google Business Profile optimization, local citations, NAP consistency, and ranking in the map pack." publishDate="Jan 30, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="10 min read" category="Local SEO">
+  <h2>What Is Local SEO?</h2>
+  <p>Local SEO is the practice of optimizing your online presence to attract more business from relevant local searches on Google and other search engines. When someone searches for <em>"plumber near me"</em> or <em>"best pizza in Austin"</em>, Google shows a map pack with three local businesses, followed by organic results. Local SEO helps your business appear in that map pack and rank higher in local search results.</p>
+  <p>Unlike traditional SEO, local SEO focuses on geographic signals: your physical address, service areas, local keywords, and proximity to the searcher. It is essential for brick-and-mortar businesses, service-area businesses, and anyone who serves customers in a specific region.</p>
+
+  <h2>Google Business Profile Optimization</h2>
+  <p>Your Google Business Profile (formerly Google My Business) is the most important asset for local SEO. It appears in Google Maps and the local map pack in search results. A fully optimized profile can dramatically improve your visibility.</p>
+  <h3>Essential Profile Elements</h3>
+  <ul>
+    <li><strong>Business name:</strong> Use your exact, real business name—no keyword stuffing.</li>
+    <li><strong>Address:</strong> Use a consistent format that matches your website and citations.</li>
+    <li><strong>Phone number:</strong> Use a local number when possible; avoid call-tracking numbers that change.</li>
+    <li><strong>Website URL:</strong> Link to a relevant landing page, not your homepage if you have location-specific pages.</li>
+    <li><strong>Business category:</strong> Choose the most specific primary category; add secondary categories if relevant.</li>
+    <li><strong>Hours:</strong> Keep hours accurate and update for holidays and special hours.</li>
+    <li><strong>Attributes:</strong> Add attributes like "Women-owned," "Wheelchair accessible," or "Outdoor seating" if applicable.</li>
+  </ul>
+  <p>Regularly post updates, offers, and events to keep your profile active. Google rewards businesses that use their profile frequently.</p>
+
+  <h2>Local Citations and NAP Consistency</h2>
+  <p>A citation is any online mention of your business name, address, and phone number (NAP). Citations help Google verify your business exists and where it is located. Inconsistent NAP data across the web can confuse search engines and hurt your rankings.</p>
+  <h3>NAP Consistency Best Practices</h3>
+  <ul>
+    <li>Use the exact same format everywhere: <em>Street, City, State ZIP</em> or <em>Street, City, State, ZIP</em>.</li>
+    <li>Abbreviate consistently (e.g., always use "St." or always use "Street").</li>
+    <li>Include your full business name exactly as it appears on your website.</li>
+    <li>Use the same phone number format (with or without dashes, but consistent).</li>
+  </ul>
+  <p>Submit your business to major directories like Yelp, Apple Maps, Bing Places, and industry-specific directories. Audit existing citations periodically and fix any inconsistencies.</p>
+
+  <h2>Local Keywords and On-Page SEO</h2>
+  <p>Local keywords include geographic modifiers like city names, neighborhoods, or "near me." Use them naturally in your title tags, meta descriptions, headings, and body content.</p>
+  <ul>
+    <li>Target <em>"[service] + [city]"</em> (e.g., "roof repair Denver").</li>
+    <li>Create location-specific landing pages for each service area.</li>
+    <li>Include local landmarks, neighborhoods, and regional terms in your content.</li>
+    <li>Avoid stuffing; write for humans first, search engines second.</li>
+  </ul>
+
+  <h2>Reviews and Ratings</h2>
+  <p>Reviews are a major ranking factor for local SEO. They also influence click-through rates and conversions. A business with 4.8 stars and 200 reviews will typically outrank one with 4.2 stars and 20 reviews.</p>
+  <h3>How to Get More Reviews</h3>
+  <ul>
+    <li>Ask satisfied customers directly—in person, by email, or via SMS.</li>
+    <li>Make it easy: provide a direct link to your Google review form.</li>
+    <li>Respond to every review, positive and negative, professionally.</li>
+    <li>Never buy fake reviews; Google penalizes this and it damages trust.</li>
+  </ul>
+
+  <h2>Local Link Building</h2>
+  <p>Backlinks from local websites—chambers of commerce, local news, city guides, and industry associations—strengthen your local authority. Sponsor local events, participate in community initiatives, and contribute to local publications to earn these links naturally.</p>
+
+  <h2>Map Pack Ranking Factors</h2>
+  <p>Google's local algorithm considers many factors when ranking businesses in the map pack. The most influential include:</p>
+  <ul>
+    <li><strong>Relevance:</strong> How well your business matches the search query.</li>
+    <li><strong>Distance:</strong> Proximity to the searcher's location.</li>
+    <li><strong>Prominence:</strong> Your reputation (reviews, backlinks, mentions).</li>
+    <li><strong>Google Business Profile completeness:</strong> A fully filled-out, active profile.</li>
+    <li><strong>Behavioral signals:</strong> Clicks, calls, direction requests, and website visits from your listing.</li>
+  </ul>
+  <p>Focus on relevance and prominence through optimization and reviews; distance is largely outside your control but can be influenced by accurate service-area settings.</p>
+</BlogLayout>

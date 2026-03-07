@@ -1,0 +1,85 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('Content Strategy', 'Content Strategy for SEO: How to Plan Content That Ranks', ['seo', 'content']);
+---
+<BlogLayout title="Content Strategy for SEO: How to Plan Content That Ranks" description="Build a data-driven content strategy with content pillars, topic clusters, search intent mapping, and content gap analysis to grow organic traffic." publishDate="Jan 25, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="11 min read" category="Content Strategy">
+  <h2>Content Pillars and Topic Clusters</h2>
+  <p>A content pillar is a comprehensive, in-depth piece of content that covers a broad topic. Topic clusters are groups of related articles that link back to the pillar and to each other. This structure helps search engines understand your site's expertise and improves internal linking.</p>
+  <p>For example, if your pillar is <em>"Complete Guide to Email Marketing"</em>, your clusters might include <em>"Email Subject Line Best Practices"</em>, <em>"How to Build an Email List"</em>, and <em>"Email Automation Tools"</em>. Each cluster page links to the pillar, and the pillar links to each cluster.</p>
+  <ul>
+    <li>Choose 3–5 pillars that align with your business goals and audience needs.</li>
+    <li>Create 5–10 cluster articles per pillar.</li>
+    <li>Use clear, descriptive URLs and headings for each piece.</li>
+    <li>Link clusters to the pillar and to related clusters.</li>
+  </ul>
+
+  <h2>Topic Research and Keyword Discovery</h2>
+  <p>Topic research is the foundation of a content strategy that ranks. Use keyword research tools, Google's autocomplete, People Also Ask, and competitor analysis to find topics your audience is searching for.</p>
+  <h3>Effective Topic Research Methods</h3>
+  <ul>
+    <li><strong>Keyword tools:</strong> Ahrefs, SEMrush, or Moz to find search volume, difficulty, and related keywords.</li>
+    <li><strong>Google autocomplete:</strong> Type your main topic and see what suggestions appear.</li>
+    <li><strong>People Also Ask:</strong> Expand these boxes to discover related questions.</li>
+    <li><strong>Competitor content:</strong> See what topics your competitors rank for and identify gaps.</li>
+    <li><strong>Forums and communities:</strong> Reddit, Quora, and industry forums reveal real questions.</li>
+  </ul>
+
+  <h2>Content Calendar Planning</h2>
+  <p>A content calendar keeps your strategy on track. Plan topics, assign writers, set deadlines, and align publishing with product launches, seasons, or industry events.</p>
+  <ul>
+    <li>Start with your pillar and cluster structure.</li>
+    <li>Prioritize high-intent, high-value keywords first.</li>
+    <li>Balance new content with updates to existing pieces.</li>
+    <li>Include republishing and promotion tasks.</li>
+  </ul>
+
+  <h2>Search Intent Mapping</h2>
+  <p>Search intent is the goal behind a query. Google rewards content that matches intent. There are four main types: informational, navigational, transactional, and commercial investigation.</p>
+  <ul>
+    <li><strong>Informational:</strong> User wants to learn (e.g., "what is SEO"). Create guides, how-tos, and definitions.</li>
+    <li><strong>Navigational:</strong> User wants a specific site (e.g., "Facebook login"). Usually not a content opportunity.</li>
+    <li><strong>Transactional:</strong> User wants to buy (e.g., "buy running shoes"). Create product pages and landing pages.</li>
+    <li><strong>Commercial investigation:</strong> User is comparing options (e.g., "best CRM software"). Create comparison and review content.</li>
+  </ul>
+  <p>Map each target keyword to its intent and create content that satisfies it. A transactional keyword needs a buying-focused page, not a long educational article.</p>
+
+  <h2>Content Gaps Analysis</h2>
+  <p>Content gap analysis identifies topics you have not covered but your competitors or the market have. Use tools to compare your site's keywords to competitors' and find opportunities.</p>
+  <ul>
+    <li>List keywords your top competitors rank for that you do not.</li>
+    <li>Filter by relevance, search volume, and difficulty.</li>
+    <li>Add high-value gaps to your content calendar.</li>
+    <li>Consider updating existing pages to cover related gaps.</li>
+  </ul>
+
+  <h2>Content Formats and When to Use Them</h2>
+  <p>Different formats work for different intents and stages of the buyer journey.</p>
+  <ul>
+    <li><strong>How-to guides:</strong> Informational intent; build authority and backlinks.</li>
+    <li><strong>Listicles:</strong> Quick answers; good for featured snippets.</li>
+    <li><strong>Comparison posts:</strong> Commercial investigation; high conversion potential.</li>
+    <li><strong>Case studies:</strong> Proof and trust; B2B and high-ticket products.</li>
+    <li><strong>Videos and infographics:</strong> Shareable; good for engagement and links.</li>
+  </ul>
+
+  <h2>Updating Old Content</h2>
+  <p>Refreshing existing content is often more efficient than creating new pieces. Pages that already rank can gain more traffic with updates.</p>
+  <ul>
+    <li>Identify pages with declining traffic or outdated information.</li>
+    <li>Update statistics, examples, and screenshots.</li>
+    <li>Add new sections or expand thin content.</li>
+    <li>Improve internal links and meta descriptions.</li>
+    <li>Change the publish date or add an "Updated" note.</li>
+  </ul>
+
+  <h2>Measuring Content Performance</h2>
+  <p>Track metrics that matter: organic traffic, rankings, engagement, and conversions.</p>
+  <ul>
+    <li><strong>Google Search Console:</strong> Impressions, clicks, average position, and top queries.</li>
+    <li><strong>Google Analytics:</strong> Sessions, bounce rate, time on page, and conversions.</li>
+    <li><strong>Rank tracking:</strong> Monitor keyword positions over time.</li>
+    <li><strong>Backlinks:</strong> See which content earns links.</li>
+  </ul>
+  <p>Use this data to double down on what works and improve or retire underperforming content.</p>
+</BlogLayout>

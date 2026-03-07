@@ -1,0 +1,62 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('Keyword Research', 'Keyword Research for Beginners', ['seo', 'keyword']);
+---
+<BlogLayout title="Keyword Research for Beginners: A Step-by-Step Guide" description="Learn how to find the right keywords for your website and start driving organic traffic with this comprehensive beginner's guide." publishDate="Feb 28, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="10 min read" category="Keyword Research">
+  <h2>What Are Keywords?</h2>
+  <p>Keywords are the words and phrases people type into search engines like Google when they're looking for information, products, or services. When you optimize your website for specific keywords, you're essentially telling search engines what your content is about and helping them match your pages to relevant searches.</p>
+  <p>Think of keywords as the bridge between what users want and what you offer. If someone searches for "best running shoes for flat feet," they have a clear intent. Your job is to create content that answers that query and uses language that aligns with how real people search.</p>
+
+  <h2>Types of Keywords: Short-Tail, Long-Tail, and LSI</h2>
+  <p>Not all keywords are created equal. Understanding the different types helps you build a balanced keyword strategy that targets both high-volume and high-intent searches.</p>
+  
+  <h3>Short-Tail Keywords</h3>
+  <p>Short-tail keywords are brief, usually one to three words. Examples include "running shoes," "SEO tools," or "coffee maker." They typically have high search volume but also fierce competition. New websites often struggle to rank for short-tail terms because established sites dominate these searches.</p>
+  
+  <h3>Long-Tail Keywords</h3>
+  <p>Long-tail keywords are longer, more specific phrases like "best running shoes for flat feet under $100" or "how to do keyword research for a new blog." They have lower search volume but much higher intent. Users searching long-tail phrases are usually closer to making a decision or taking action. These are ideal for beginners because competition is lower and conversion rates tend to be higher.</p>
+  
+  <h3>LSI Keywords (Latent Semantic Indexing)</h3>
+  <p>LSI keywords are terms related to your main keyword that help search engines understand context. For a page about "keyword research," LSI terms might include "search volume," "competition," "search intent," "keyword tools," and "organic traffic." Including LSI keywords naturally in your content signals topical relevance and can improve rankings.</p>
+
+  <h2>How to Find Keywords</h2>
+  <p>Keyword discovery starts with understanding your audience and your niche. Begin by brainstorming topics your ideal customer would search for. Put yourself in their shoes: What problems do they have? What questions do they ask? What stage of the buyer journey are they in?</p>
+  <p>Use your existing content, customer support tickets, and sales conversations as inspiration. Competitor websites are another goldmine—see what topics they cover and what keywords they target. Social media, forums like Reddit, and Q&amp;A sites like Quora reveal the exact language real people use.</p>
+
+  <h2>Free Keyword Research Tools</h2>
+  <p>You don't need a big budget to start keyword research. Several powerful tools are available for free or with generous free tiers.</p>
+  <ul>
+    <li><strong>Google Keyword Planner</strong> – Free with a Google Ads account. Shows search volume and competition levels. Best for discovering new keyword ideas and gauging demand.</li>
+    <li><strong>Google Search (Autocomplete)</strong> – Type your seed keyword and see what Google suggests. Use this for long-tail variations and question-based keywords.</li>
+    <li><strong>Google "People Also Ask"</strong> – Expand any search result to see related questions. These are perfect for FAQ sections and featured snippet opportunities.</li>
+    <li><strong>Ubersuggest</strong> – Neil Patel's tool offers free keyword suggestions, search volume, and difficulty scores. Great for beginners.</li>
+    <li><strong>AnswerThePublic</strong> – Visualizes questions, prepositions, and comparisons people search for. Excellent for content ideation.</li>
+  </ul>
+
+  <h2>Paid Keyword Research Tools</h2>
+  <p>When you're ready to scale, paid tools provide deeper data, competitor insights, and workflow features that save hours.</p>
+  <ul>
+    <li><strong>Ahrefs</strong> – Industry-leading keyword database with accurate search volumes. Excellent for competitor analysis and content gap discovery.</li>
+    <li><strong>SEMrush</strong> – All-in-one SEO suite with strong keyword research, position tracking, and traffic analytics.</li>
+    <li><strong>Moz Keyword Explorer</strong> – User-friendly interface with keyword suggestions, difficulty scores, and SERP analysis.</li>
+    <li><strong>SpyFu</strong> – Focuses on competitor keyword data. See what keywords your rivals rank for and their ad history.</li>
+  </ul>
+
+  <h2>Understanding Search Intent</h2>
+  <p>Search intent is the goal behind a search. Google prioritizes content that matches intent. There are four main types:</p>
+  <ul>
+    <li><strong>Informational</strong> – User wants to learn something. Example: "how does SEO work"</li>
+    <li><strong>Navigational</strong> – User wants to find a specific site. Example: "Facebook login"</li>
+    <li><strong>Transactional</strong> – User wants to buy or take action. Example: "buy iPhone 16"</li>
+    <li><strong>Commercial</strong> – User is researching before buying. Example: "best CRM software 2026"</li>
+  </ul>
+  <p>Your content format and structure should align with intent. A transactional keyword needs a product page or clear CTAs. An informational keyword needs a comprehensive guide or tutorial.</p>
+
+  <h2>Organizing Your Keywords</h2>
+  <p>Once you've collected keywords, organize them into a spreadsheet or keyword database. Include columns for: keyword, search volume, difficulty, intent, current ranking (if any), target URL, and priority. Group keywords by topic or page to create content clusters. This helps you plan a logical site structure and internal linking strategy.</p>
+  <p>Prioritize keywords based on relevance, search volume, difficulty, and business value. Don't chase every keyword—focus on terms that align with your goals and that you have a realistic chance of ranking for.</p>
+
+  <h2>Implementing Keywords on Your Site</h2>
+  <p>Place your primary keyword in the title tag, meta description, H1 heading, and first paragraph. Use variations and LSI keywords naturally throughout the body. Avoid keyword stuffing—write for humans first. Include keywords in image alt text, URL slugs, and subheadings where it makes sense. Monitor rankings and adjust your strategy based on performance data.</p>
+</BlogLayout>

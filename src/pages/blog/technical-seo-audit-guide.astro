@@ -1,0 +1,42 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('Technical SEO', 'Technical SEO Audit', ['seo', 'technical']);
+---
+<BlogLayout title="Technical SEO Audit: Complete Guide for Non-Developers" description="Run a professional technical SEO audit without coding knowledge. Find and fix crawl errors, speed issues, and more." publishDate="Feb 10, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="11 min read" category="Technical SEO">
+  <h2>What Is Technical SEO?</h2>
+  <p>Technical SEO is the practice of optimizing your site's infrastructure so search engines can crawl, index, and understand your content effectively. Unlike on-page SEO (which focuses on content and HTML elements) or off-page SEO (which focuses on backlinks), technical SEO deals with site architecture, server configuration, and performance. Even the best content won't rank if search engines can't access it or if the site delivers a poor user experience.</p>
+
+  <h2>Crawlability</h2>
+  <p>Crawlability means search engine bots can discover and access your pages. If pages are blocked, hidden, or unreachable, they won't be indexed. Common crawlability issues include: blocking bots in robots.txt, using JavaScript-heavy navigation that bots can't follow, having broken internal links, or requiring login to access content. Use Google Search Console's URL Inspection tool to test if Google can crawl specific pages. Ensure your most important pages are linked from the homepage or other crawlable pages within a few clicks.</p>
+
+  <h2>Indexation</h2>
+  <p>Indexation is when Google adds your pages to its search index. A page can be crawlable but not indexed if it's low quality, duplicate, or explicitly blocked. Check indexation status in Google Search Console under Coverage or Index. Look for "Indexed" vs "Discovered – currently not indexed" or "Crawled – currently not indexed." Fix issues like noindex tags on important pages, canonical tags pointing to the wrong URL, or thin content that doesn't meet Google's quality bar.</p>
+
+  <h2>XML Sitemaps</h2>
+  <p>An XML sitemap is a file that lists all your important URLs for search engines. It helps bots discover pages faster, especially on large or new sites. Create a sitemap using a plugin (WordPress, Shopify) or a sitemap generator. Submit it in Google Search Console under Sitemaps. Include only canonical URLs. Keep it under 50,000 URLs; split into multiple sitemaps if needed. Update the sitemap when you add or remove significant pages.</p>
+
+  <h2>Robots.txt</h2>
+  <p>Robots.txt tells search engines which parts of your site they can or cannot crawl. It lives at <code>yoursite.com/robots.txt</code>. Use it to block low-value pages like admin areas, thank-you pages, or duplicate content. Be careful not to block important pages or your CSS/JS files (needed for rendering). Test your robots.txt with Google's robots.txt Tester in Search Console. Remember: robots.txt is a request, not a guarantee—malicious bots may ignore it.</p>
+
+  <h2>Site Speed</h2>
+  <p>Page speed affects both rankings and user experience. Google uses Core Web Vitals (LCP, INP, CLS) as ranking factors. Run PageSpeed Insights or Lighthouse to identify issues. Common fixes: compress images, minify CSS and JavaScript, enable browser caching, use a CDN, and choose a fast hosting provider. For non-developers, plugins like WP Rocket (WordPress) or built-in optimizations in platforms like Shopify can help. Prioritize above-the-fold content loading first.</p>
+
+  <h2>Mobile-First Indexing</h2>
+  <p>Google primarily uses the mobile version of your site for indexing and ranking. Ensure your mobile and desktop content are equivalent—don't hide important content on mobile. Use responsive design so the same HTML is served to all devices. Avoid separate mobile URLs (m.yoursite.com) unless you have proper alternate tags. Test with Google's Mobile-Friendly Test and ensure tap targets are large enough and text is readable without zooming.</p>
+
+  <h2>HTTPS</h2>
+  <p>HTTPS encrypts data between the user and your server. Google prefers HTTPS sites and uses it as a ranking signal. Get an SSL certificate from your host or a service like Let's Encrypt. Redirect all HTTP URLs to HTTPS with a 301 redirect. Update internal links and canonical tags to use HTTPS. Check for mixed content—ensure images and scripts load over HTTPS too.</p>
+
+  <h2>Structured Data</h2>
+  <p>Structured data (schema markup) helps search engines understand your content and can enable rich results like stars, FAQs, or breadcrumbs. Use JSON-LD format in the page head or body. Implement Article schema for blog posts, Product schema for e-commerce, and Organization schema for your homepage. Validate with Google's Rich Results Test. Incorrect schema won't help and could cause issues—only add markup you understand.</p>
+
+  <h2>Duplicate Content</h2>
+  <p>Duplicate content confuses search engines about which version to rank. Common causes: www vs non-www, HTTP vs HTTPS, URL parameters, printer-friendly pages, and syndicated content. Use canonical tags to point to the preferred version. Consolidate thin or near-duplicate pages. Ensure one canonical URL per piece of unique content. Check Search Console for duplicate content issues in the Coverage report.</p>
+
+  <h2>Redirect Chains</h2>
+  <p>Redirect chains occur when Page A redirects to B, B to C, and so on. Each hop slows crawling and can dilute link equity. Use 301 redirects to send users and bots directly to the final URL. Audit your redirects with Screaming Frog or similar tools. Fix chains by updating old redirects to point to the final destination. Keep redirects under three hops when possible.</p>
+
+  <h2>404 Errors</h2>
+  <p>404 errors mean a page wasn't found. Some 404s are fine (deleted pages, typos). But if important pages return 404s—due to broken links, wrong URLs, or failed migrations—you lose traffic and confuse users. Use Search Console and crawl tools to find 404s. Fix internal links pointing to dead URLs. For removed pages with backlinks, implement 301 redirects to the most relevant page. Create a custom 404 page that helps users find what they need.</p>
+</BlogLayout>

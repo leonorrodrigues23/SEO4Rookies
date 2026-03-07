@@ -1,0 +1,82 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('Technical SEO', 'Core Web Vitals: What They Are and How to Improve Them', ['seo', 'technical']);
+---
+<BlogLayout title="Core Web Vitals: What They Are and How to Improve Them" description="Understand Google's Core Web Vitals metrics and learn practical techniques to improve your page experience scores." publishDate="Jan 12, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="9 min read" category="Technical SEO">
+  <h2>What Are Core Web Vitals?</h2>
+  <p>Core Web Vitals (CWV) are a set of metrics Google uses to measure user experience on the web. They focus on loading performance, interactivity, and visual stability. Since 2021, Core Web Vitals have been a ranking factor in Google Search, so improving them can help your SEO and user satisfaction.</p>
+  <p>The three Core Web Vitals are <strong>LCP</strong> (Largest Contentful Paint), <strong>INP</strong> (Interaction to Next Paint), and <strong>CLS</strong> (Cumulative Layout Shift). Each has a "good," "needs improvement," and "poor" threshold.</p>
+
+  <h2>LCP: Largest Contentful Paint</h2>
+  <p>LCP measures how quickly the largest visible content element (usually an image, video, or text block) loads. It reflects perceived loading speed. Google considers LCP "good" when it occurs within 2.5 seconds.</p>
+  <ul>
+    <li>LCP under 2.5s: Good</li>
+    <li>LCP 2.5s–4s: Needs improvement</li>
+    <li>LCP over 4s: Poor</li>
+  </ul>
+  <p>The LCP element is typically the hero image, a large heading, or a video. Optimizing it has the biggest impact on perceived performance.</p>
+
+  <h2>INP: Interaction to Next Paint</h2>
+  <p>INP (replacing FID in March 2024) measures responsiveness. It captures the time from a user interaction (click, tap, keypress) to the next visual update. Low INP means your page feels snappy; high INP means it feels sluggish.</p>
+  <ul>
+    <li>INP under 200ms: Good</li>
+    <li>INP 200ms–500ms: Needs improvement</li>
+    <li>INP over 500ms: Poor</li>
+  </ul>
+  <p>INP is influenced by JavaScript execution. Long tasks, heavy scripts, and blocking main-thread work can hurt INP.</p>
+
+  <h2>CLS: Cumulative Layout Shift</h2>
+  <p>CLS measures visual stability. It quantifies unexpected layout shifts—when elements move as the page loads, causing users to misclick or lose their place. A low CLS score means a stable, predictable layout.</p>
+  <ul>
+    <li>CLS under 0.1: Good</li>
+    <li>CLS 0.1–0.25: Needs improvement</li>
+    <li>CLS over 0.25: Poor</li>
+  </ul>
+  <p>Common causes include images and ads without dimensions, dynamically injected content, and web fonts causing text to reflow.</p>
+
+  <h2>Measuring Core Web Vitals</h2>
+  <p>You can measure CWV in several ways:</p>
+  <ul>
+    <li><strong>PageSpeed Insights:</strong> Free tool that shows lab and field data for a URL.</li>
+    <li><strong>Chrome DevTools:</strong> Performance panel and Lighthouse for lab testing.</li>
+    <li><strong>Search Console:</strong> Core Web Vitals report shows field data (real user metrics) for your site.</li>
+    <li><strong>Chrome User Experience Report (CrUX):</strong> Field data used by PageSpeed Insights and Search Console.</li>
+  </ul>
+  <p>Lab data (Lighthouse) is useful for debugging; field data (CrUX) reflects real users and is what Google uses for ranking.</p>
+
+  <h2>Improving LCP</h2>
+  <ul>
+    <li><strong>Optimize images:</strong> Compress, use modern formats (WebP, AVIF), and serve appropriately sized images.</li>
+    <li><strong>Preload LCP element:</strong> Use <code>rel="preload"</code> for the LCP image or font.</li>
+    <li><strong>Reduce server response time:</strong> Use a fast host, CDN, and edge caching.</li>
+    <li><strong>Minimize render-blocking resources:</strong> Defer non-critical CSS and JavaScript.</li>
+    <li><strong>Use a CDN:</strong> Serve static assets from servers close to users.</li>
+  </ul>
+
+  <h2>Improving INP</h2>
+  <ul>
+    <li><strong>Break up long tasks:</strong> Split heavy JavaScript into smaller chunks so the main thread stays responsive.</li>
+    <li><strong>Defer non-critical JavaScript:</strong> Load scripts asynchronously or after initial render.</li>
+    <li><strong>Reduce JavaScript execution time:</strong> Remove unused code, lazy-load components.</li>
+    <li><strong>Use web workers:</strong> Offload heavy computation to background threads.</li>
+    <li><strong>Optimize third-party scripts:</strong> Audit and remove or defer non-essential scripts.</li>
+  </ul>
+
+  <h2>Improving CLS</h2>
+  <ul>
+    <li><strong>Set dimensions on images and videos:</strong> Use <code>width</code> and <code>height</code> attributes or CSS to reserve space.</li>
+    <li><strong>Reserve space for ads and embeds:</strong> Use a fixed container so content does not shift when they load.</li>
+    <li><strong>Avoid inserting content above existing content:</strong> Add new content below the fold or in reserved slots.</li>
+    <li><strong>Use <code>font-display: optional</code> or <code>swap</code> carefully:</strong> Ensure fallback fonts have similar metrics to avoid layout shifts.</li>
+  </ul>
+
+  <h2>Tools for Testing Core Web Vitals</h2>
+  <ul>
+    <li><strong>PageSpeed Insights:</strong> Quick check with lab and field data.</li>
+    <li><strong>Lighthouse:</strong> Built into Chrome DevTools; run audits locally.</li>
+    <li><strong>WebPageTest:</strong> Detailed performance testing with waterfall and filmstrip views.</li>
+    <li><strong>Chrome DevTools Performance panel:</strong> Record and analyze runtime performance.</li>
+    <li><strong>Search Console Core Web Vitals report:</strong> See how real users experience your pages.</li>
+  </ul>
+</BlogLayout>

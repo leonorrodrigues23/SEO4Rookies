@@ -1,0 +1,42 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('Link Building', 'How to Build Backlinks', ['seo', 'backlinks']);
+---
+<BlogLayout title="How to Build Backlinks in 2026: Proven Strategies" description="Discover ethical and effective link building strategies that work in 2026, from guest posting to digital PR." publishDate="Feb 15, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="12 min read" category="Link Building">
+  <h2>What Are Backlinks?</h2>
+  <p>Backlinks are links from other websites to your site. When Site A links to Site B, Site B receives a backlink. Search engines treat backlinks as votes of confidence—the more high-quality sites that link to you, the more authoritative your site appears. Backlinks remain one of the strongest ranking factors in Google's algorithm.</p>
+
+  <h2>Why Backlinks Matter</h2>
+  <p>Backlinks signal trust and relevance. A link from a reputable site passes authority (often called "link juice") to your page. Not all backlinks are equal: links from authoritative, relevant sites count more than links from low-quality or spammy sites. Backlinks also drive referral traffic and can introduce your brand to new audiences. In competitive niches, a strong backlink profile is often the difference between ranking on page one and page five.</p>
+
+  <h2>Guest Posting</h2>
+  <p>Guest posting means writing and publishing articles on other websites in exchange for a link back to your site. Find sites in your niche that accept guest posts. Pitch unique, valuable content ideas—not generic filler. Follow their guidelines and deliver quality. The best guest posts provide genuine value to the host site's audience while naturally incorporating a link to your content. Build relationships with editors for repeat opportunities.</p>
+  <ul>
+    <li>Research target sites for domain authority and relevance</li>
+    <li>Personalize outreach emails—avoid templates</li>
+    <li>Offer multiple topic ideas to increase acceptance</li>
+    <li>Include author bio with a link to your site</li>
+  </ul>
+
+  <h2>Broken Link Building</h2>
+  <p>Broken link building involves finding broken links on other sites and suggesting your content as a replacement. Use tools like Ahrefs or Check My Links to find 404s on relevant pages. Reach out to the site owner, politely point out the broken link, and suggest your resource as a replacement. This works because you're solving a problem—they get a working link, you get a backlink. Focus on resource pages, roundups, and link-heavy articles.</p>
+
+  <h2>Digital PR</h2>
+  <p>Digital PR builds links through newsworthy content and media coverage. Create data studies, original research, surveys, or timely reports that journalists and bloggers want to cite. Distribute via press releases, HARO, or direct outreach. Earned media links from major publications carry significant authority. This strategy requires more investment but can yield high-impact links from domains like Forbes, BBC, or industry publications.</p>
+
+  <h2>HARO (Help A Reporter Out)</h2>
+  <p>HARO connects journalists with expert sources. Sign up for daily emails with journalist queries. When a query matches your expertise, respond quickly with a concise, quotable answer. If a journalist uses your quote, they often link to your site. HARO links are typically dofollow and from reputable domains. Be selective—only respond to queries where you have genuine expertise. Speed matters; journalists work on tight deadlines.</p>
+
+  <h2>Resource Page Link Building</h2>
+  <p>Resource pages are curated lists of links on a specific topic. Find resource pages in your niche using search operators like <code>inurl:resources</code> or <code>"best resources for" + your topic</code>. Evaluate each page for relevance and quality. Reach out to the page owner and suggest your content as an addition. Explain why your resource is valuable and unique. Resource page links are often easier to earn than editorial links and can be highly relevant.</p>
+
+  <h2>Skyscraper Technique</h2>
+  <p>The skyscraper technique involves creating content that's better than existing top-ranking content, then reaching out to sites that link to the originals. Find popular content in your niche. Create something more comprehensive, updated, or visually superior. Use tools to find who links to the original. Email those site owners and suggest your improved version. Many will add your link because it genuinely improves their resource.</p>
+
+  <h2>Competitor Backlink Analysis</h2>
+  <p>Your competitors' backlinks are a roadmap for your own link building. Use Ahrefs, SEMrush, or Moz to analyze their backlink profiles. Identify link sources you could also target—guest post opportunities, resource pages, directories, partnerships. Prioritize links from relevant, authoritative sites. Don't copy every link; focus on those that align with your brand and content.</p>
+
+  <h2>Toxic Backlinks</h2>
+  <p>Not all backlinks are good. Toxic backlinks come from spammy, irrelevant, or low-quality sites. They can hurt your rankings or trigger manual actions. Use Google Search Console and third-party tools to audit your backlink profile. Identify suspicious links—from adult sites, link farms, or irrelevant niches. Use the Google Disavow Tool to ask Google to ignore toxic links you can't remove. Disavow sparingly and only when necessary; don't disavow links without clear evidence of harm.</p>
+</BlogLayout>

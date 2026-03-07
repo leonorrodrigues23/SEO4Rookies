@@ -1,0 +1,86 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('SEO Strategy', 'Common SEO Mistakes That Kill Your Rankings', ['seo', 'mistakes']);
+---
+<BlogLayout title="Common SEO Mistakes That Kill Your Rankings" description="Avoid these 10 common SEO mistakes that can tank your organic traffic and rankings overnight." publishDate="Jan 5, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="7 min read" category="SEO Strategy">
+  <h2>Keyword Stuffing</h2>
+  <p>Keyword stuffing is the practice of cramming target keywords into your content unnaturally to manipulate rankings. Google's algorithms have long penalized this. Stuffing makes content hard to read and signals low quality.</p>
+  <ul>
+    <li>Use keywords naturally in titles, headings, and body text.</li>
+    <li>Focus on synonyms, related terms, and natural language.</li>
+    <li>Write for humans first; optimize for search second.</li>
+  </ul>
+
+  <h2>Ignoring Mobile</h2>
+  <p>Google uses mobile-first indexing: it primarily crawls and indexes the mobile version of your site. If your mobile experience is slow, broken, or poorly designed, your rankings will suffer.</p>
+  <ul>
+    <li>Use responsive design so your site works on all screen sizes.</li>
+    <li>Test on real devices, not just desktop.</li>
+    <li>Ensure tap targets are large enough and content is readable without zooming.</li>
+  </ul>
+
+  <h2>Slow Page Speed</h2>
+  <p>Slow pages hurt user experience and SEO. Core Web Vitals are a ranking factor, and users abandon slow sites. Large images, unoptimized code, and poor hosting are common culprits.</p>
+  <ul>
+    <li>Compress images and use modern formats (WebP, AVIF).</li>
+    <li>Minify CSS and JavaScript; remove unused code.</li>
+    <li>Use a fast host and CDN.</li>
+  </ul>
+
+  <h2>Thin Content</h2>
+  <p>Thin content is shallow, low-value content that does not satisfy search intent. Google aims to surface comprehensive, helpful content. Short, generic pages rarely rank.</p>
+  <ul>
+    <li>Cover topics thoroughly; aim for depth, not just word count.</li>
+    <li>Answer the user's question completely.</li>
+    <li>Add examples, data, and unique insights when possible.</li>
+  </ul>
+
+  <h2>Duplicate Content</h2>
+  <p>Duplicate content—identical or near-identical content across URLs—can dilute rankings and confuse search engines. It is not always penalized, but it rarely helps.</p>
+  <ul>
+    <li>Use canonical tags to indicate the preferred version of a page.</li>
+    <li>Consolidate similar pages when appropriate.</li>
+    <li>Avoid publishing the same article on multiple domains without proper handling.</li>
+  </ul>
+
+  <h2>Neglecting Meta Tags</h2>
+  <p>Title tags and meta descriptions influence click-through rates and help search engines understand your pages. Missing or weak meta tags waste ranking potential.</p>
+  <ul>
+    <li>Write unique title tags (50–60 characters) with your primary keyword.</li>
+    <li>Write compelling meta descriptions (150–160 characters) that encourage clicks.</li>
+    <li>Ensure every important page has custom meta tags.</li>
+  </ul>
+
+  <h2>Bad Internal Linking</h2>
+  <p>Internal links help search engines discover and understand your content. Poor internal linking—or no internal linking—leaves pages orphaned and weakens site structure.</p>
+  <ul>
+    <li>Link from high-authority pages to important but underlinked pages.</li>
+    <li>Use descriptive anchor text that reflects the target page's topic.</li>
+    <li>Create a logical site structure with clear categories and hierarchies.</li>
+  </ul>
+
+  <h2>Ignoring Search Intent</h2>
+  <p>If your content does not match what users want when they search, you will not rank—or you will rank and get high bounce rates. Informational queries need guides; transactional queries need product pages.</p>
+  <ul>
+    <li>Analyze the top results for your target keyword to understand intent.</li>
+    <li>Create content that satisfies that intent.</li>
+    <li>Avoid targeting transactional keywords with long-form blog posts.</li>
+  </ul>
+
+  <h2>Not Tracking Results</h2>
+  <p>Without data, you cannot improve. Many businesses never set up Search Console or Analytics, or they ignore the data. You need to know what is working and what is not.</p>
+  <ul>
+    <li>Install Google Analytics and Google Search Console.</li>
+    <li>Track organic traffic, rankings, and conversions.</li>
+    <li>Review performance regularly and adjust your strategy.</li>
+  </ul>
+
+  <h2>Buying Links</h2>
+  <p>Purchasing backlinks violates Google's guidelines. Link schemes can result in manual penalties and long-term ranking losses. Quality links are earned through great content and outreach, not bought.</p>
+  <ul>
+    <li>Focus on creating linkable content.</li>
+    <li>Build relationships and earn links through PR, guest posting, and partnerships.</li>
+    <li>Avoid link farms, PBNs, and paid link schemes.</li>
+  </ul>
+</BlogLayout>

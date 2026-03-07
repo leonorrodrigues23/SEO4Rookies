@@ -1,0 +1,51 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('On-Page SEO', 'On-Page SEO Checklist', ['seo', 'on-page']);
+---
+<BlogLayout title="On-Page SEO Checklist: 15 Essentials for Every Page" description="A practical on-page SEO checklist covering title tags, meta descriptions, headings, internal links, and more." publishDate="Feb 20, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="8 min read" category="On-Page SEO">
+  <h2>Title Tags</h2>
+  <p>Your title tag is the clickable headline that appears in search results. It's one of the most influential on-page ranking factors. Keep it under 60 characters to avoid truncation. Include your primary keyword near the beginning. Make it compelling—this is your ad copy in the SERPs. Each page should have a unique title that accurately describes its content.</p>
+
+  <h2>Meta Descriptions</h2>
+  <p>Meta descriptions don't directly impact rankings, but they influence click-through rates. Write 150–160 characters that summarize the page and include a call to action. Use your target keyword naturally. Avoid duplicate meta descriptions across pages. A strong meta description can significantly boost traffic even without moving up in rankings.</p>
+
+  <h2>H1–H6 Heading Structure</h2>
+  <p>Headings organize your content and help search engines understand hierarchy. Use one H1 per page—typically your main topic. Use H2s for major sections and H3s for subsections. Don't skip levels (e.g., H1 to H3). Include keywords in headings where natural. A clear structure improves both SEO and readability.</p>
+
+  <h2>URL Structure</h2>
+  <p>Keep URLs short, descriptive, and keyword-rich. Use hyphens to separate words. Avoid numbers, dates, and unnecessary parameters. A URL like <code>/blog/keyword-research-guide</code> is better than <code>/p?id=12345</code>. Clean URLs are easier for users and search engines to parse and remember.</p>
+
+  <h2>Internal Linking</h2>
+  <p>Internal links connect related pages and distribute authority throughout your site. Link from high-authority pages to newer or less-linked pages. Use descriptive anchor text—avoid "click here." Aim for 2–5 internal links per 1,000 words of content. Internal linking helps users discover content and helps search engines understand your site structure.</p>
+
+  <h2>Image Optimization</h2>
+  <p>Images can drive traffic through image search and affect page speed. Use descriptive file names (e.g., <code>keyword-research-tools-screenshot.png</code>). Write alt text that describes the image and includes relevant keywords when natural. Compress images before uploading—use WebP format when possible. Lazy loading can improve initial load times for image-heavy pages.</p>
+
+  <h2>Content Quality</h2>
+  <p>Google rewards content that satisfies user intent. Write comprehensive, accurate, and original content. Cover topics in depth rather than superficially. Use examples, data, and expert insights. Update content regularly to keep it fresh. Quality content earns links, shares, and longer time on page—all positive ranking signals.</p>
+
+  <h2>Keyword Placement</h2>
+  <p>Place your primary keyword in the title, H1, first 100 words, and at least one subheading. Use variations and LSI keywords throughout the body. Avoid stuffing—keyword density should feel natural. Focus on semantic relevance and user experience over exact-match repetition.</p>
+
+  <h2>Schema Markup</h2>
+  <p>Structured data helps search engines understand your content and can unlock rich results. Use Article schema for blog posts, Product schema for e-commerce, and FAQ schema for Q&amp;A content. Implement with JSON-LD in the page head or body. Test with Google's Rich Results Test to ensure validity.</p>
+
+  <h2>Mobile-Friendliness</h2>
+  <p>Google uses mobile-first indexing, meaning it primarily crawls and indexes the mobile version of your site. Ensure responsive design, readable text without zooming, and tap-friendly buttons. Test with Google's Mobile-Friendly Test. A poor mobile experience hurts rankings and user engagement.</p>
+
+  <h2>Page Speed</h2>
+  <p>Fast pages rank better and convert better. Optimize images, minify CSS and JavaScript, leverage browser caching, and consider a CDN. Use Core Web Vitals (LCP, FID, CLS) as your guide. Tools like PageSpeed Insights and Lighthouse provide actionable recommendations.</p>
+
+  <h2>Canonical Tags</h2>
+  <p>Canonical tags tell search engines which URL is the preferred version of a page. Use them when you have duplicate or similar content (e.g., pagination, parameters). Point the canonical to the main version. This prevents dilution of ranking signals across duplicate URLs.</p>
+
+  <h2>Content Length</h2>
+  <p>There's no universal ideal length—it depends on the topic and intent. Some queries need 500 words; others need 3,000+. Generally, comprehensive content outperforms thin content. Cover the topic thoroughly. Use word count as a guideline, not a goal. Quality and completeness matter more than hitting a number.</p>
+
+  <h2>Readability</h2>
+  <p>Write in clear, simple language. Use short sentences and paragraphs. Break up text with subheadings, bullet points, and images. Avoid jargon unless your audience expects it. Readability affects bounce rate and time on page, which can indirectly influence rankings.</p>
+
+  <h2>User Experience Signals</h2>
+  <p>Engagement metrics like bounce rate, time on page, and pages per session can correlate with rankings. Design for clarity and ease of use. Make navigation intuitive. Ensure CTAs are visible. A positive user experience keeps people on your site longer and signals to Google that your content satisfies intent.</p>
+</BlogLayout>

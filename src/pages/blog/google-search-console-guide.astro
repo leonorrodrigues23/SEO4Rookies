@@ -1,0 +1,39 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAuthorByCategory } from '../../authors';
+const author = getAuthorByCategory('SEO Tools', 'Google Search Console', ['seo', 'tools']);
+---
+<BlogLayout title="Google Search Console: The Free SEO Tool You're Not Using Enough" description="Unlock the full power of Google Search Console with advanced tips most SEOs overlook." publishDate="Feb 5, 2026" author={author.name} authorTitle={author.title} authorImage={author.image} readingTime="9 min read" category="SEO Tools">
+  <h2>Setting Up Google Search Console</h2>
+  <p>Google Search Console (GSC) is a free tool that shows how Google sees your site. To get started, go to search.google.com/search-console and sign in with your Google account. Add your property by entering your website URL. You'll need to verify ownership before you can access data. Choose a verification method—HTML file upload, HTML meta tag, Google Analytics, Google Tag Manager, or DNS record. For most sites, the HTML meta tag or DNS method works well. Once verified, data will start flowing within a few days.</p>
+
+  <h2>Verifying Ownership</h2>
+  <p>Verification proves you own or have access to the site. For HTML tag verification, add the meta tag to your homepage's head section. For DNS verification, add a TXT record to your domain's DNS settings. Domain property verification (recommended) covers all URLs under your domain, including subdomains and protocols. URL prefix verification covers only the exact URL you add. If you use both www and non-www, consider adding both or using a domain property.</p>
+
+  <h2>Performance Reports</h2>
+  <p>The Performance report shows how your site appears in Google Search. Key metrics include total clicks, impressions, average position, and CTR. Use the date range selector to compare periods. Filter by query, page, country, or device to uncover opportunities. High impressions with low CTR often indicate poor titles or meta descriptions—optimize those. Low impressions with good CTR might mean you need more content or better targeting. Export data to CSV for deeper analysis in spreadsheets.</p>
+
+  <h2>Search Queries Analysis</h2>
+  <p>The Queries tab reveals what people search for to find your site. Sort by impressions to see your biggest opportunities. Look for queries where you rank on page 2 or 3—small improvements could move you to page 1. Identify queries with high impressions but zero clicks; these may need better titles or snippets. Use the "Compare" mode to see how query performance changed over time. Combine this with keyword research to prioritize content updates and new pages.</p>
+
+  <h2>Coverage Reports</h2>
+  <p>The Coverage report (under Indexing in the left menu) shows which pages Google has indexed and which have issues. "Valid" pages are indexed successfully. "Error" pages have problems preventing indexation. "Valid with warnings" are indexed but have non-critical issues. "Excluded" pages were intentionally or automatically not indexed. Fix errors first—these are pages Google wants to index but can't. Common issues: "Submitted URL not selected as canonical," "Crawled – currently not indexed," and "Discovered – currently not indexed."</p>
+
+  <h2>Sitemaps</h2>
+  <p>Submit your XML sitemap in GSC under Sitemaps. Enter the sitemap URL (e.g., <code>https://yoursite.com/sitemap.xml</code>) and click Submit. GSC will show discovered URLs, indexed URLs, and any errors. If your sitemap has issues, fix them and resubmit. For large sites, use a sitemap index that references multiple sitemaps. GSC doesn't guarantee indexation from sitemaps alone—it helps discovery. Ensure your sitemap only includes canonical URLs and is kept up to date.</p>
+
+  <h2>URL Inspection Tool</h2>
+  <p>The URL Inspection tool lets you check how Google sees a specific URL. Enter any URL from your property and click "Test live URL." You'll see if the page is indexed, when it was last crawled, and any issues. Use "Request indexing" to ask Google to recrawl a page after you've made changes. This is useful after publishing new content or fixing errors. The tool also shows the rendered HTML and any resources Google couldn't load. Use it to debug indexation problems on important pages.</p>
+
+  <h2>Core Web Vitals</h2>
+  <p>Core Web Vitals measure user experience: LCP (loading), INP (interactivity), and CLS (visual stability). In GSC, go to Experience &gt; Core Web Vitals to see which URLs have issues. "Poor" URLs need improvement; "Needs improvement" is a warning. "Good" URLs meet the thresholds. Use the "Open report" link to see specific URLs and group by issue type. Fix the most impactful pages first—those with the most impressions. Combine with PageSpeed Insights for actionable recommendations.</p>
+
+  <h2>Manual Actions</h2>
+  <p>Manual actions are penalties applied by Google's team when your site violates guidelines. Check under Security &amp; Manual Actions &gt; Manual Actions. If you see "No issues detected," you're fine. If there's a manual action, read the details carefully. Common causes: unnatural links, thin content, user-generated spam, or hacked content. Fix the underlying issue, then submit a reconsideration request. Manual actions are rare but serious—address them immediately.</p>
+
+  <h2>Links Report</h2>
+  <p>The Links report shows your top linking sites, top linked pages, and internal links. Use it to understand your link profile and identify your most linked content. The "Top linking sites" section reveals who links to you—useful for relationship building and spotting toxic links. "Top linked pages" shows which of your pages earn the most links. "Internal links" shows how your site is connected. Export link data for analysis. Note: GSC samples link data, so numbers may not be exhaustive.</p>
+
+  <h2>Advanced Filtering Tips</h2>
+  <p>Use filters to slice Performance data effectively. Filter by "Search type" to see Web vs Image results. Filter by device (mobile, desktop, tablet) to spot device-specific issues. Combine filters—e.g., queries + pages—to see which pages rank for which terms. Use the "Compare" date range to analyze trends. Create custom reports by exporting filtered data. Set up email alerts for critical issues like manual actions or significant drops in indexed pages. Check GSC weekly for ongoing monitoring and monthly for deeper analysis.</p>
+</BlogLayout>

@@ -1,0 +1,143 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { SITE_BRAND } from '../../consts';
+
+const blogPosts = [
+  {
+    title: "Keyword Research for Beginners: A Step-by-Step Guide",
+    description: "Learn how to find the right keywords for your website and start driving organic traffic with this comprehensive beginner's guide.",
+    slug: "keyword-research-beginners-guide",
+    category: "Keyword Research",
+    readingTime: "10 min read",
+    date: "Feb 28, 2026"
+  },
+  {
+    title: "On-Page SEO Checklist: 15 Essentials for Every Page",
+    description: "A practical on-page SEO checklist covering title tags, meta descriptions, headings, internal links, and more.",
+    slug: "on-page-seo-checklist",
+    category: "On-Page SEO",
+    readingTime: "8 min read",
+    date: "Feb 20, 2026"
+  },
+  {
+    title: "How to Build Backlinks in 2026: Proven Strategies",
+    description: "Discover ethical and effective link building strategies that work in 2026, from guest posting to digital PR.",
+    slug: "how-to-build-backlinks",
+    category: "Link Building",
+    readingTime: "12 min read",
+    date: "Feb 15, 2026"
+  },
+  {
+    title: "Technical SEO Audit: Complete Guide for Non-Developers",
+    description: "Run a professional technical SEO audit without coding knowledge. Find and fix crawl errors, speed issues, and more.",
+    slug: "technical-seo-audit-guide",
+    category: "Technical SEO",
+    readingTime: "11 min read",
+    date: "Feb 10, 2026"
+  },
+  {
+    title: "Google Search Console: The Free SEO Tool You're Not Using Enough",
+    description: "Unlock the full power of Google Search Console with advanced tips most SEOs overlook.",
+    slug: "google-search-console-guide",
+    category: "SEO Tools",
+    readingTime: "9 min read",
+    date: "Feb 5, 2026"
+  },
+  {
+    title: "Local SEO: How to Rank in Google Maps and Local Search",
+    description: "Everything you need to know about local SEO, Google Business Profile optimization, and ranking in the map pack.",
+    slug: "local-seo-guide",
+    category: "Local SEO",
+    readingTime: "10 min read",
+    date: "Jan 30, 2026"
+  },
+  {
+    title: "Content Strategy for SEO: How to Plan Content That Ranks",
+    description: "Build a data-driven content strategy that targets the right keywords and builds topical authority over time.",
+    slug: "content-strategy-for-seo",
+    category: "Content Strategy",
+    readingTime: "11 min read",
+    date: "Jan 25, 2026"
+  },
+  {
+    title: "SEO vs PPC: Which Is Better for Your Business?",
+    description: "An honest comparison of organic SEO and paid search advertising to help you decide where to invest your marketing budget.",
+    slug: "seo-vs-ppc",
+    category: "Digital Marketing",
+    readingTime: "8 min read",
+    date: "Jan 18, 2026"
+  },
+  {
+    title: "Core Web Vitals: What They Are and How to Improve Them",
+    description: "Understand Google's Core Web Vitals metrics and learn practical techniques to improve your page experience scores.",
+    slug: "core-web-vitals-guide",
+    category: "Technical SEO",
+    readingTime: "9 min read",
+    date: "Jan 12, 2026"
+  },
+  {
+    title: "Common SEO Mistakes That Kill Your Rankings",
+    description: "Avoid these 10 common SEO mistakes that can tank your organic traffic and rankings overnight.",
+    slug: "common-seo-mistakes",
+    category: "SEO Strategy",
+    readingTime: "7 min read",
+    date: "Jan 5, 2026"
+  }
+];
+---
+
+<MainLayout title="Blog" description={`SEO tips, guides, and strategies from the ${SITE_BRAND} team.`}>
+  <section class="blog-hero">
+    <div class="hero-container">
+      <h1>{SITE_BRAND} Blog</h1>
+      <p class="hero-subtitle">Expert SEO tips, guides, and strategies to grow your organic traffic</p>
+    </div>
+  </section>
+
+  <section class="blog-listing">
+    <div class="listing-container">
+      <div class="posts-grid">
+        {blogPosts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="post-card">
+            <div class="post-meta">
+              <span class="post-category">{post.category}</span>
+              <span class="post-reading">{post.readingTime}</span>
+            </div>
+            <h2 class="post-title">{post.title}</h2>
+            <p class="post-excerpt">{post.description}</p>
+            <div class="post-footer">
+              <span class="post-date">{post.date}</span>
+              <span class="read-more">Read more &rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .blog-hero { background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); padding: 4rem 0; }
+  .hero-container { max-width: 48rem; margin: 0 auto; padding: 0 2rem; text-align: center; }
+  .hero-container h1 { font-family: 'Sora', sans-serif; font-size: 2.75rem; font-weight: 700; color: white !important; margin-bottom: 0.75rem; }
+  .hero-subtitle { font-family: 'Poppins', sans-serif; font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); }
+  .blog-listing { padding: 4rem 0; background: #F9FAFB; }
+  .listing-container { max-width: 56rem; margin: 0 auto; padding: 0 2rem; }
+  .posts-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .post-card { display: block; background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 2rem; text-decoration: none; transition: all 0.2s ease; }
+  .post-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-color: #3B82F6; }
+  .post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+  .post-category { background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .post-reading { font-size: 0.8125rem; color: #68727C; }
+  .post-title { font-family: 'Sora', sans-serif; font-size: 1.375rem; font-weight: 700; color: #162433; margin-bottom: 0.5rem; line-height: 1.3; }
+  .post-excerpt { font-size: 0.9375rem; color: #4B5563; line-height: 1.6; margin-bottom: 1rem; }
+  .post-footer { display: flex; justify-content: space-between; align-items: center; }
+  .post-date { font-size: 0.8125rem; color: #9CA3AF; }
+  .read-more { font-size: 0.875rem; font-weight: 600; color: #1a365d; }
+  @media (max-width: 768px) {
+    .hero-container h1 { font-size: 2rem; }
+    .hero-subtitle { font-size: 1.125rem; }
+    .blog-listing { padding: 2.5rem 0; }
+    .post-card { padding: 1.5rem; }
+  }
+</style>
