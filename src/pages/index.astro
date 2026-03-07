@@ -25,8 +25,8 @@ const products = [
     name: "Moz",
     bestFor: "Best All-in-One SEO Platform",
     shortDescription: "The most trusted name in SEO with an unmatched Domain Authority metric, beginner-friendly interface, and a powerful suite of tools covering keyword research, site audits, rank tracking, and link analysis—all backed by the industry's best educational resources.",
-    image: "/images/moz.svg",
-    rating: 4.9,
+    image: "https://logo.clearbit.com/moz.com",
+    rating: 4.7,
     spec1Label: "Free Plan", spec1Value: "Yes (Limited)",
     spec2Label: "Starting Price", spec2Value: "$49/mo",
     spec3Label: "Keyword Tracking", spec3Value: "Up to 3,000",
@@ -54,8 +54,8 @@ const products = [
     name: "Ahrefs",
     bestFor: "Best for Backlink Analysis & Competitor Research",
     shortDescription: "The largest backlink index in the industry with unmatched crawl data, powerful competitor analysis, and a content explorer that reveals what's working in any niche. The go-to tool for link building professionals.",
-    image: "/images/ahrefs.svg",
-    rating: 4.8,
+    image: "https://logo.clearbit.com/ahrefs.com",
+    rating: 4.5,
     spec1Label: "Free Tools", spec1Value: "Webmaster Tools",
     spec2Label: "Starting Price", spec2Value: "$129/mo",
     spec3Label: "Backlink Index", spec3Value: "35T+ links",
@@ -83,8 +83,8 @@ const products = [
     name: "SEMrush",
     bestFor: "Best for Competitive Intelligence & PPC",
     shortDescription: "The most feature-rich digital marketing suite covering SEO, PPC, content marketing, social media, and competitive research. Over 55 tools in one platform with the largest keyword database of any provider.",
-    image: "/images/semrush.svg",
-    rating: 4.7,
+    image: "https://logo.clearbit.com/semrush.com",
+    rating: 4.6,
     spec1Label: "Free Plan", spec1Value: "Yes (Limited)",
     spec2Label: "Starting Price", spec2Value: "$139.95/mo",
     spec3Label: "Keywords DB", spec3Value: "26B+ keywords",
@@ -112,8 +112,8 @@ const products = [
     name: "Ubersuggest",
     bestFor: "Best Budget-Friendly SEO Tool",
     shortDescription: "Created by Neil Patel, Ubersuggest delivers essential keyword research, competitor analysis, and site audit features at a fraction of the cost of premium tools. Lifetime plans available starting at a one-time payment.",
-    image: "/images/ubersuggest.svg",
-    rating: 4.5,
+    image: "https://logo.clearbit.com/neilpatel.com",
+    rating: 4.1,
     spec1Label: "Free Plan", spec1Value: "Yes (3/day)",
     spec2Label: "Starting Price", spec2Value: "$12/mo",
     spec3Label: "Lifetime Option", spec3Value: "From $120",
@@ -141,7 +141,7 @@ const products = [
     name: "Screaming Frog",
     bestFor: "Best for Technical SEO Audits",
     shortDescription: "The industry-standard desktop crawler used by technical SEOs worldwide. Crawls websites like a search engine to find broken links, audit redirects, analyze metadata, and uncover technical issues that hurt rankings.",
-    image: "/images/screaming-frog.svg",
+    image: "https://logo.clearbit.com/screamingfrog.co.uk",
     rating: 4.4,
     spec1Label: "Free Plan", spec1Value: "500 URLs",
     spec2Label: "Annual Price", spec2Value: "$259/yr",
@@ -170,8 +170,8 @@ const products = [
     name: "Surfer SEO",
     bestFor: "Best for On-Page Content Optimization",
     shortDescription: "AI-powered content optimization platform that analyzes top-ranking pages and provides real-time scoring, keyword suggestions, and content structure recommendations to help your pages rank higher.",
-    image: "/images/surfer-seo.svg",
-    rating: 4.3,
+    image: "https://logo.clearbit.com/surferseo.com",
+    rating: 4.2,
     spec1Label: "Free Plan", spec1Value: "No",
     spec2Label: "Starting Price", spec2Value: "$99/mo",
     spec3Label: "Content Editor", spec3Value: "Real-time Scoring",
@@ -538,30 +538,114 @@ function getStarRating(rating: number) {
             <thead>
               <tr>
                 <th>Tool</th>
-                <th>Best For</th>
-                <th>Free Plan</th>
+                <th>Our Rating</th>
                 <th>Starting Price</th>
-                <th>Rating</th>
+                <th>Free Browser Extension</th>
+                <th>Learning Resources</th>
+                <th>Beginner Friendly</th>
+                <th>Authority Metric</th>
+                <th>All-in-One Suite</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              {products.map((product, index) => (
-                <tr>
-                  <td class="product-cell">
-                    {index === 0 && <span class="table-editor-badge">Editor's Choice</span>}
-                    <div class="product-info">
-                      <img src={product.image} alt={product.name} class="table-image" onerror="this.style.display='none'" />
-                      <span class="table-product-name">{product.name}</span>
-                    </div>
-                  </td>
-                  <td><span class="best-for-badge">{product.bestFor}</span></td>
-                  <td class="spec-cell">{product.spec1Value}</td>
-                  <td class="spec-cell">{product.spec2Value}</td>
-                  <td class="rating-cell">{product.rating}</td>
-                  <td><a href={product.url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
-                </tr>
-              ))}
+              <tr class="highlighted-row">
+                <td class="product-cell">
+                  <span class="table-editor-badge">Editor's Choice</span>
+                  <div class="product-info">
+                    <img src={products[0].image} alt={products[0].name} class="table-image" onerror="this.style.display='none'" />
+                    <span class="table-product-name">{products[0].name}</span>
+                  </div>
+                </td>
+                <td class="rating-cell">{products[0].rating}</td>
+                <td class="spec-cell">$49/mo</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span> MozBar</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span> Academy + Blog</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span> Excellent</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span> DA (Industry Standard)</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span></td>
+                <td><a href={products[0].url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
+              </tr>
+              <tr>
+                <td class="product-cell">
+                  <div class="product-info">
+                    <img src={products[1].image} alt={products[1].name} class="table-image" onerror="this.style.display='none'" />
+                    <span class="table-product-name">{products[1].name}</span>
+                  </div>
+                </td>
+                <td class="rating-cell">{products[1].rating}</td>
+                <td class="spec-cell">$129/mo</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="partial-cell">Blog Only</td>
+                <td class="partial-cell">Steep Curve</td>
+                <td class="partial-cell">DR (Alternative)</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span></td>
+                <td><a href={products[1].url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
+              </tr>
+              <tr>
+                <td class="product-cell">
+                  <div class="product-info">
+                    <img src={products[2].image} alt={products[2].name} class="table-image" onerror="this.style.display='none'" />
+                    <span class="table-product-name">{products[2].name}</span>
+                  </div>
+                </td>
+                <td class="rating-cell">{products[2].rating}</td>
+                <td class="spec-cell">$139.95/mo</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="partial-cell">Academy (Basic)</td>
+                <td class="partial-cell">Overwhelming</td>
+                <td class="partial-cell">AS (Alternative)</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span></td>
+                <td><a href={products[2].url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
+              </tr>
+              <tr>
+                <td class="product-cell">
+                  <div class="product-info">
+                    <img src={products[3].image} alt={products[3].name} class="table-image" onerror="this.style.display='none'" />
+                    <span class="table-product-name">{products[3].name}</span>
+                  </div>
+                </td>
+                <td class="rating-cell">{products[3].rating}</td>
+                <td class="spec-cell">$12/mo</td>
+                <td class="partial-cell">Basic Extension</td>
+                <td class="partial-cell">YouTube Only</td>
+                <td class="check-cell"><span class="table-check">&#10003;</span> Good</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td><a href={products[3].url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
+              </tr>
+              <tr>
+                <td class="product-cell">
+                  <div class="product-info">
+                    <img src={products[4].image} alt={products[4].name} class="table-image" onerror="this.style.display='none'" />
+                    <span class="table-product-name">{products[4].name}</span>
+                  </div>
+                </td>
+                <td class="rating-cell">{products[4].rating}</td>
+                <td class="spec-cell">$259/yr</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="miss-cell">Technical Only</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td><a href={products[4].url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
+              </tr>
+              <tr>
+                <td class="product-cell">
+                  <div class="product-info">
+                    <img src={products[5].image} alt={products[5].name} class="table-image" onerror="this.style.display='none'" />
+                    <span class="table-product-name">{products[5].name}</span>
+                  </div>
+                </td>
+                <td class="rating-cell">{products[5].rating}</td>
+                <td class="spec-cell">$99/mo</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="partial-cell">Blog Only</td>
+                <td class="partial-cell">Moderate</td>
+                <td class="miss-cell"><span class="table-x">&#10007;</span></td>
+                <td class="miss-cell">Content Only</td>
+                <td><a href={products[5].url} target="_blank" rel="nofollow noopener" class="table-cta">Try It Free</a></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1010,6 +1094,13 @@ function getStarRating(rating: number) {
   .rating-cell { font-weight: 700; color: #162433; }
   .table-cta { display: inline-block; padding: 0.5rem 1rem; background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%); color: white; font-weight: 600; font-size: 0.75rem; border-radius: 6px; text-decoration: none; transition: all 0.2s ease; white-space: nowrap; }
   .table-cta:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3); }
+  .highlighted-row { background: #F0FDF4; }
+  .highlighted-row td { border-bottom: 2px solid #22C55E; }
+  .check-cell { color: #16A34A; font-weight: 600; font-size: 0.8125rem; }
+  .table-check { color: #16A34A; font-weight: 700; margin-right: 0.25rem; }
+  .miss-cell { color: #DC2626; font-size: 0.8125rem; }
+  .table-x { color: #DC2626; font-weight: 700; }
+  .partial-cell { color: #D97706; font-size: 0.8125rem; font-weight: 500; }
   .decision-guide { margin-bottom: 3rem; scroll-margin-top: 140px; }
   .guide-intro { font-size: 1rem; color: #4B5563; margin-bottom: 2rem; font-style: italic; }
   .guide-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #E5E7EB; }
