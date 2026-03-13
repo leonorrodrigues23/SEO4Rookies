@@ -10,7 +10,7 @@ const authors: Record<string, Author> = {
     name: 'Alex Torres',
     title: 'SEO Editor',
     image: '/images/Authors images of the review articles/alex-torres.jpg',
-    bio: 'Former agency SEO strategist turned consumer advocate with 8 years of hands-on experience ranking websites across competitive niches. Alex has tested over 40 SEO tools and helped hundreds of businesses choose the right software.'
+    bio: 'Former agency SEO strategist turned consumer advocate with 13 years of hands-on experience ranking websites across competitive niches. Alex has tested over 40 SEO tools and helped hundreds of businesses choose the right software.'
   },
   'rachel-nguyen': {
     name: 'Rachel Nguyen',
